@@ -1,0 +1,19 @@
+Description:
+    Generates a Slim and SCSS file for your component and adds the file import to base.scss
+
+Example:
+    rails generate component my-component
+
+    This will create:
+        app/assets/stylesheets/blocks/_my_component.scss
+        app/views/application/_my_component.html.erb
+
+    And this will add the following to base.scss:
+        @import 'blocks/my_component';
+
+Options
+    --block, Boolean, default: false; Will designate this component as a block component and add
+        a yield to the view file.
+
+    --format, String, default: 'erb'; Will set the extension format for the view file. Acceptable
+        options are: 'erb', 'slim', and 'haml'
